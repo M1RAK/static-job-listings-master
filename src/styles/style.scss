@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "League Spartan",monospace;
+}
+
+:root {
+// ## Colors
+
+// ### Primary
+--Desaturated-Dark-Cyan: hsl(180, 29%, 50%);
+
+// ### (box-shadow)
+--Desaturated-Dark-Cyan-Bs: hsl(169, 40%, 84%);
+// ### Neutral
+// (Background)
+--Light-Grayish-Cyan-Bg: hsl(180, 52%, 96%);
+//  (Filter Tablets)
+--Light-Grayish-Cyan: hsl(180, 31%, 95%);
+--Dark-Grayish-Cyan: hsl(180, 8%, 52%);
+--Very-Dark-Grayish-Cyan: hsl(180, 14%, 20%);
+
+}
+
+body {
+ background-color: var(--Light-Grayish-Cyan-Bg);
+ width: 100%;
+ display: flex;
+ justify-content: center;
+}
+
+// Header
+.filter-bg{
+    background-image:url('../images/bg-header-desktop.svg') ;
+    background-color: var(--Desaturated-Dark-Cyan);
+    height: 156px;
+    width: 100vw;
+}
+
+// Filter
+.filter-container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    
+    .filter-tab{
+        position: absolute;
+        bottom: -1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        width: 87%;
+        min-height: 60px;
+        padding: 1rem 2rem;
+        background-color: white;
+        box-shadow: 0 2px 4px 0px var(--Desaturated-Dark-Cyan-Bs);
+        border-radius: 5px;
+
+        .tab{
+            margin: 0 .5rem;
+            cursor: default;
+            display: inline-flex;
+           .tab-title{
+            font-weight: 600;
+            padding: .35rem;
+            color: var(--Desaturated-Dark-Cyan);
+            background-color: var(--Light-Grayish-Cyan-Bg);
+           }
+           .tab-close{
+            padding: .35rem .4rem;
+            display: inline-flex;
+            align-items: center;
+            background-color: var(--Desaturated-Dark-Cyan);
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+            cursor: pointer;
+            &:hover{
+                background-color: var(--Very-Dark-Grayish-Cyan);
+            }
+           }
+        }
+    }
+
+    .clear-btn{
+        color: var(--Desaturated-Dark-Cyan);
+        margin-left: auto;
+        cursor: pointer;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+}
+
+// Card
+.card-container{
+    position: relative;
+    min-width: 345px;
+    max-height: 19.5rem;
+    margin: 3rem 5rem;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: white;
+    box-shadow: 0 2px 8px 2px var(--Desaturated-Dark-Cyan-Bs);
+    .card-highlight{
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: var(--Desaturated-Dark-Cyan);
+        width: 5px;
+        height: 100%;
+        border-radius: 15px 0 0 15px;
+    }
+    .card-meta{
+        margin-left: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: .5rem;
+        cursor: default;
+        .tags{
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-end;
+            padding-left: .5rem;
+            gap: .45rem;
+            font-weight: 600;
+            .tag{
+                color: white;
+                padding: .3rem .4rem;
+                padding-top: .4rem;
+                border-radius: 15px;
+                border: none;
+            }
+            .company{
+                display: block;
+                color: var(--Desaturated-Dark-Cyan);
+                font-size: 1.5rem;
+                padding: 0;
+            }
+            .featured{
+                background-color: var(--Very-Dark-Grayish-Cyan);
+                text-transform: uppercase;
+            }
+            .new{
+                background-color: var(--Desaturated-Dark-Cyan);
+                text-transform: uppercase;
+            }
+        }
+        .break-line{
+            display: none;
+        }
+     .card-title{
+        padding: 0 0.5rem;
+        margin: .5rem 0;
+        font-size: 1.2rem;
+        white-space: nowrap;
+     }
+     .card-info{
+        padding: 0 0.5rem;
+     }
+    }
+    .filters{
+        margin-left: auto;
+        display: flex;
+        flex-wrap: wrap;
+        gap: .45rem;
+        cursor: pointer;
+
+        span{
+            padding: .5rem;
+            background-color: var(--Light-Grayish-Cyan-Bg);
+            color: var(--Desaturated-Dark-Cyan);
+            font-weight: 700;
+        }
+    }
+}
+
+.attribution { display: block; font-size: 16px; text-align: center; }
+.attribution a { color: var(--Desaturated-Dark-Cyan); }
+
+
+// Media Queries
+
+@media(max-width:1052px){
+  .card-container{
+    .card-meta{
+        .card-title{
+            font-size: 1rem;
+        }
+    }
+
+    .filters{
+        gap: .3rem;
+        margin-left: 3rem;
+        span{
+            padding: .3rem;
+        }
+    }
+  }
+}
+
+
+@media(max-width:765px) {   
+.filter-container{
+        width: 90%;
+        margin: 0 auto;
+        margin-right: 1rem;
+        .filter-tab{
+            margin-bottom: 1.5rem;
+            display: inline-flex;
+            flex-wrap: wrap;
+            .tab{
+                margin: .5rem;
+            }
+        }
+    }
+
+.card-container{
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem 0.5rem;
+    margin-right: 1rem;
+    border-radius: 0 5px 5px 0;
+    .card-icon{
+        position: absolute;
+        top: -2rem;
+        left: 1rem;
+    }
+    .card-meta{
+        margin-top: 3rem;
+        margin-bottom: 1rem;
+        gap: 1rem;
+        .tags{
+            .new{
+                margin-left: 1.2rem;
+            }
+
+        }
+    }
+
+    .break-line{
+        display: flex;
+        justify-content: flex-start;
+        border: 1px solid var(--Dark-Grayish-Cyan);
+        width: 85%;
+        margin-left: 1.5rem;
+    }
+
+    .filters{
+        gap: .5rem;
+        margin-left: 1rem;
+        margin-top: 1rem;
+        span{
+            padding: .6rem;
+            font-size: 1rem;
+        }
+    }
+
+}
+}
+
+@media (max-width:555px){
+    .filter-bg{
+        background-image:url('../images/bg-header-mobile.svg') ;
+        width: 100%;
+        object-fit: cover;
+    } 
+}
