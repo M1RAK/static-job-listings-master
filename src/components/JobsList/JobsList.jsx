@@ -23,21 +23,21 @@ const JobList = (
 
           <div className="card-meta">
           <div className="tags">
-          <span className="tag company">
+          <div className="tag company">
             <h4>{company}</h4>
-          </span>
-         {isNew && <span className="tag new">
+          </div>
+         {isNew && <div className="tag new">
             <p>New!</p>
-            </span>}
-         {isFeatured && <span className="tag featured">
+            </div>}
+         {isFeatured && <div className="tag featured">
             <p>Featured</p>
-            </span>}
+            </div>}
            </div>
 
            <div className="card-title">
-            <h2>
+            <h1>
              {position}
-            </h2>
+            </h1>
            </div>
 
            <div className='card-info'>
@@ -49,9 +49,9 @@ const JobList = (
              <div  className="break-line"></div>
              <div className="filters">
              {jobTags.map((tag,index) => {
-                return <span key={index} onClick={() => handleFilters(tag)}>
+                return <div key={index} onClick={() => handleFilters(tag)}>
                     {tag}
-                </span> 
+                </div> 
              })
 
              }
