@@ -37,7 +37,7 @@ h1{
 
 // Header
 .filter-bg{
-    background-image:url('../images/bg-header-desktop.svg') ;
+    background-image:url('/images/bg-header-desktop.svg') ;
     background-color: var(--Desaturated-Dark-Cyan);
     height: 156px;
     width: 100vw;
@@ -272,7 +272,7 @@ h1{
 
 @media (max-width:555px){
     .filter-bg{
-        background-image:url('../images/bg-header-mobile.svg') ;
+        background-image:url('/images/bg-header-mobile.svg') ;
         width: 100%;
         object-fit: cover;
     } 

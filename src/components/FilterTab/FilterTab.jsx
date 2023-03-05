@@ -1,5 +1,5 @@
-import Bg from '../../images/bg-header-desktop.svg'
-import TabClose from '../../images/icon-remove.svg'
+// import Bg from '../../images/bg-header-desktop.svg'
+import TabClose from '/images/icon-remove.svg'
 
 const FilterTab = ({clearTags,removeTag,filters}) => {
     return (
