@@ -18,7 +18,7 @@ const JobList = (
         <div key={id} className="card-container">
       {isFeatured && <div className="card-highlight"></div>}
            <span  className="card-icon">
-            <img src={`../..${logo}`} alt="" />
+            <img src={`../../${logo}`} alt="" />
            </span>
 
           <div className="card-meta">
