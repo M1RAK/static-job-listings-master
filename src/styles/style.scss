@@ -103,7 +103,7 @@ h1{
 // Card
 .card-container{
     position: relative;
-    min-width: 345px;
+    min-width: 305px;
     max-height: 19.5rem;
     margin: 3rem 5rem;
     padding: 1rem 2rem;
@@ -213,10 +213,11 @@ h1{
 
 @media(max-width:765px) {   
 .filter-container{
-        width: 90%;
+        width: 100%;
         margin: 0 auto;
-        margin-right: 1rem;
+        // margin-right: 1rem;
         .filter-tab{
+            left: 12.52%;
             margin-bottom: 1.5rem;
             display: inline-flex;
             flex-wrap: wrap;
