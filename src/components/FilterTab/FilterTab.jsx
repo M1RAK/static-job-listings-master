@@ -1,4 +1,4 @@
-import TabClose from '/assets/icon-remove.svg'
+import TabClose from '/assets/images/icon-remove.svg'
 
 const FilterTab = ({clearTags,removeTag,filters}) => {
     return (
